@@ -35,3 +35,17 @@ $router->group(['namespace' => 'Backend'], function () use ($router)
 		});
 	});
 });
+
+/*
+|--------------------------------------------------------------------------
+| API routes
+|--------------------------------------------------------------------------
+*/
+
+Route::group(['prefix' => 'api', 'namespace' => 'API'], function ()
+{
+	Route::group(['prefix' => 'v1'], function ()
+	{
+        require Config::get('generator.path_api_routes');
+	});
+});
