@@ -26,7 +26,7 @@ class CustomerController extends AppBaseController
 	 */
 	public function index()
 	{
-		$customers = $this->customerRepository->paginate(10);
+		$customers = $this->customerRepository->all();
 
 		return view('frontend.customers.index')
 			->with('customers', $customers);

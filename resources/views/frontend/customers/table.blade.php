@@ -1,4 +1,4 @@
-<table class="table">
+<table id="customers" class="table table-striped table-bordered table-condensed">
     <thead>
     <th>Id</th>
 			<th>Custcode</th>

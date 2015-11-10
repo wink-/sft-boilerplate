@@ -32,6 +32,25 @@ elixir(function(mix) {
                 'backend/plugin/toastr/toastr.min.js',
                 'backend/custom.js'
             ], 'public/js/backend.js')
+        .scripts([ // Combine js assets for datatables and its plugins
+                'datatables/jquery.dataTables.js',
+                'datatables/dataTables.bootstrap.js',
+                'datatables/dataTables.buttons.js',
+                'datatables/jszip.js',
+                'datatables/pdfmake.js',
+                'datatables/vfs_fonts.js',
+                'datatables/buttons.html5.js',
+                'datatables/buttons.print.js',
+                'datatables/dataTables.colReorder.js',
+            ],'./public/js/dataTables.js')
+         .styles([ // Combine styles for datatables
+          'datatables/dataTables.bootstrap.css',
+          'datatables/buttons.dataTables.css',
+          'datatables/colReorder.bootstrap.css',
+
+
+
+          ], './public/css/dataTables.css');        
 
         // Apply version control
 //        .version(["public/css/frontend.css", "public/js/frontend.js", "public/css/backend.css", "public/js/backend.js"]);

@@ -7,7 +7,7 @@
         <meta name="_token" content="{{ csrf_token() }}" />
         <title>@yield('title', app_name())</title>
         <meta name="description" content="@yield('meta_description', 'Default Description')">
-        <meta name="author" content="@yield('author', 'Anthony Rappa')">
+        <meta name="author" content="@yield('author', 'Rob Winkky')">
         @yield('meta')
 
         @yield('before-styles-end')
@@ -42,7 +42,6 @@
         @yield('before-scripts-end')
         {!! HTML::script(elixir('js/frontend.js')) !!}
         @yield('after-scripts-end')
-
-       {{-- @include('includes.partials.ga') --}}
+       {{-- @include('includes.partials.ga') Google Analytics --}}
     </body>
 </html>
