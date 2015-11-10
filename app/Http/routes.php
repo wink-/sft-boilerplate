@@ -49,3 +49,11 @@ Route::group(['prefix' => 'api', 'namespace' => 'API'], function ()
         require Config::get('generator.path_api_routes');
 	});
 });
+
+
+Route::resource('customers', 'CustomerController');
+
+Route::get('customers/{id}/delete', [
+    'as' => 'customers.delete',
+    'uses' => 'CustomerController@destroy',
+]);

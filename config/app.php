@@ -122,6 +122,7 @@ return [
 		/*
 		 * Laravel Framework Service Providers...
 		 */
+
 		Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
 		Illuminate\Auth\AuthServiceProvider::class,
 		Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -145,7 +146,7 @@ return [
 		Illuminate\Translation\TranslationServiceProvider::class,
 		Illuminate\Validation\ValidationServiceProvider::class,
 		Illuminate\View\ViewServiceProvider::class,
-		Illuminate\Html\HtmlServiceProvider::class,
+		'Collective\Html\HtmlServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -160,6 +161,7 @@ return [
 		App\Providers\RouteServiceProvider::class,
 		App\Providers\MacroServiceProvider::class,
 
+
 		/*
 		 * Third party service providers
 		 */
@@ -173,10 +175,11 @@ return [
 		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 		Barryvdh\Debugbar\ServiceProvider::class,
 		yajra\Datatables\DatatablesServiceProvider::class,
-		Collective\Html\HtmlServiceProvider::class,
 		Laracasts\Flash\FlashServiceProvider::class,
 		Mitul\Generator\GeneratorServiceProvider::class,
 		Sofa\Eloquence\ServiceProvider::class,
+		
+
 	],
 
 	/*
@@ -227,14 +230,15 @@ return [
 
 		/* Third Party */
 		'Active'    => HieuLe\Active\Facades\Active::class,
-		'FORM'		=> Illuminate\Html\FormFacade::class,
+//		'Form'		=> Illuminate\Html\FormFacade::class,
 		'Gravatar'  => Creativeorange\Gravatar\Facades\Gravatar::class,
-		'HTML'		=> Illuminate\Html\HtmlFacade::class,
+//		'HTML'		=> Illuminate\Html\HtmlFacade::class,
 		'Socialize' => Laravel\Socialite\Facades\Socialite::class,
 		'Image'     => Intervention\Image\Facades\Image::class,
 		'Datatables'=> yajra\Datatables\Datatables::class,
-		'Form'      => Collective\Html\FormFacade::class,
 		'Html'      => Collective\Html\HtmlFacade::class,
+		'HTML'      => Collective\Html\HtmlFacade::class,
+		'Form'      => Collective\Html\FormFacade::class,
 		'Flash'     => Laracasts\Flash\Flash::class
 
 	],
