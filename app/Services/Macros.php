@@ -17,6 +17,7 @@ class Macros extends FormBuilder {
 	public function selectState($name, $selected = null, $options = array())
 	{
 		$list = [
+
 			'' => 'Select One...',
 			'AL' => 'Alabama',
 			'AK' => 'Alaska',
