@@ -1,11 +1,11 @@
-<?php namespace App\Libraries\Repositories;
+<?php namespace App\Repositories\Frontend\Dmr;
 
-use App\Models\Customer;
+use App\Models\Dmr;
 use Bosnadev\Repositories\Eloquent\Repository;
 use Schema;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
-class CustomerRepository extends Repository
+class DmrRepository extends Repository
 {
 
     /**
@@ -14,14 +14,14 @@ class CustomerRepository extends Repository
     **/
     public function model()
     {
-      return 'App\Models\Customer';
+      return 'App\Models\Dmr';
     }
 
 	public function search($input)
     {
-        $query = Customer::query();
+        $query = Dmr::query();
 
-        $columns = Schema::getColumnListing('customers');
+        $columns = Schema::getColumnListing('dmrs');
         $attributes = array();
 
         foreach($columns as $attribute)
@@ -46,7 +46,7 @@ class CustomerRepository extends Repository
 
         if(empty($model))
         {
-            throw new HttpException(1001, "Customer not found");
+            throw new HttpException(1001, "Dmr not found");
         }
 
         return $model;
@@ -58,7 +58,7 @@ class CustomerRepository extends Repository
 
         if(empty($model))
         {
-            throw new HttpException(1001, "Customer not found");
+            throw new HttpException(1001, "Dmr not found");
         }
 
         return $model->delete();

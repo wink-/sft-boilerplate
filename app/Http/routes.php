@@ -57,3 +57,19 @@ Route::get('customers/{id}/delete', [
     'as' => 'customers.delete',
     'uses' => 'CustomerController@destroy',
 ]);
+
+
+Route::resource('workorders', 'WorkorderController');
+
+Route::get('workorders/{id}/delete', [
+    'as' => 'workorders.delete',
+    'uses' => 'WorkorderController@destroy',
+]);
+
+
+Route::resource('dmrs', 'DmrController');
+
+Route::get('dmrs/{id}/delete', [
+    'as' => 'dmrs.delete',
+    'uses' => 'DmrController@destroy',
+]);

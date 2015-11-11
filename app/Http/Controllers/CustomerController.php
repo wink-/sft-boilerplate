@@ -3,7 +3,7 @@
 use App\Http\Requests;
 use App\Http\Requests\CreateCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
-use App\Libraries\Repositories\CustomerRepository;
+use App\Repositories\Frontend\Customer\CustomerRepository;
 use Flash;
 use Mitul\Controller\AppBaseController as AppBaseController;
 use Response;

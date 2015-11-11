@@ -14,3 +14,7 @@
 
 
 Route::resource("customers", "CustomerAPIController");
+
+Route::resource("workorders", "WorkorderAPIController");
+
+Route::resource("dmrs", "DmrAPIController");

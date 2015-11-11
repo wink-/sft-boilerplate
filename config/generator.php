@@ -26,7 +26,7 @@ return [
 
     'path_model'               => app_path('Models/'),
 
-    'path_repository'          => app_path('Libraries/Repositories/'),
+    'path_repository'          => app_path('Repositories/'),
 
     'path_controller'          => app_path('Http/Controllers/'),
 
@@ -51,7 +51,7 @@ return [
 
     'namespace_model'          => 'App\Models',
 
-    'namespace_repository'     => 'App\Libraries\Repositories',
+    'namespace_repository'     => 'App\Repositories\Frontend',
 
     'namespace_controller'     => 'App\Http\Controllers',
 

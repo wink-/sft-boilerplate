@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers\API;
 
 use App\Http\Requests;
-use App\Libraries\Repositories\CustomerRepository;
+use App\Repositories\Frontend\Customer\CustomerRepository;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Mitul\Controller\AppBaseController as AppBaseController;
