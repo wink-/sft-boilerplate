@@ -73,3 +73,8 @@ Route::get('dmrs/{id}/delete', [
     'as' => 'dmrs.delete',
     'uses' => 'DmrController@destroy',
 ]);
+
+Route::post('dmrs/stage', [ 
+	'as' => 'dmrs.stage',
+	'uses' => 'DmrController@createDmrFromWorkorder'
+	]);

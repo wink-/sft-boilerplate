@@ -1,12 +1,14 @@
 <?php namespace App\Http\Controllers;
-
+use Flash;
+use Response;
 use App\Http\Requests;
+use Illuminate\Http\Request;
+use App\Models\Workorder;
 use App\Http\Requests\CreateDmrRequest;
 use App\Http\Requests\UpdateDmrRequest;
 use App\Repositories\Frontend\Dmr\DmrRepository;
-use Flash;
 use Mitul\Controller\AppBaseController as AppBaseController;
-use Response;
+
 
 class DmrController extends AppBaseController
 {
@@ -31,6 +33,20 @@ class DmrController extends AppBaseController
 		return view('frontend.dmrs.index')
 			->with('dmrs', $dmrs);
 	}
+
+	/**
+	 * Lookup a workorder to create a DMR from and load the create page
+	 * @param  Request $request 
+	 * @return reponse 	
+	 */
+    public function createDmrFromWorkorder(Request $request)
+    {
+
+        $workorder = Workorder::where('WORKORDR', $request->WORKORDR)
+            ->firstOrFail();
+
+        return view('frontend.dmrs.create', compact('workorder'));
+    }
 
 	/**
 	 * Show the form for creating a new Dmr.

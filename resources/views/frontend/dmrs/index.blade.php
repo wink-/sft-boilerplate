@@ -5,10 +5,18 @@
     <div class="container-fluid">
 
         @include('flash::message')
-
         <div class="row">
-            <h1 class="pull-left">Dmrs</h1>
-            <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('dmrs.create') !!}">Add New</a>
+            <h1 class="pull-left">Discrepant Material Report Index</h1>
+     
+            <div class="pull-right" style="margin-top: 25px">
+                <fieldset class="form-inline">
+                {!! Form::open(['route' => 'dmrs.stage']) !!}        
+                    {!! Form::label('WORKORDR', 'Workorder:') !!}
+                    {!! Form::text('WORKORDR', null, ['class' => 'form-control', 'required']) !!}
+                    {!! Form::submit('Create DMR', ['class' => 'btn btn-primary']) !!} 
+                {!! Form::close() !!}
+                </fieldset>
+            </div>
         </div>
 
         <div class="row">
